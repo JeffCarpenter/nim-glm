@@ -1,5 +1,7 @@
 when defined(SomeReal) and not defined(SomeFloat):
   type SomeFloat = SomeReal
+elif not defined(SomeReal) and not defined(SomeFloat):
+  type SomeFloat = float | float32 | float64
 
 import globals
 import mat
